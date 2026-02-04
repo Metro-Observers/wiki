@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Википедия проекта - Прочее</title>
+    <title>Википедия проекта - Торговые предложения</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../resources/styles.css">
 </head>
@@ -13,7 +13,7 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <a href="../index.html" style="text-decoration: none; display: flex; align-items: center; gap: 15px;">
+                    <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 15px;">
                         <div class="logo-icon">
                             <i class="fas fa-book-open"></i>
                         </div>
@@ -35,44 +35,58 @@
                     <a href="../index.html" style="color: inherit; text-decoration: none;">Главная</a>
                 </li>
                 <li class="tab">
-                    <a href="beginners.html" style="color: inherit; text-decoration: none;">Новичкам</a>
+                    <a href="../pages/beginners.html" style="color: inherit; text-decoration: none;">Новичкам</a>
                 </li>
                 <li class="tab">
-                    <a href="rules.html" style="color: inherit; text-decoration: none;">Правила сервера</a>
+                    <a href="../pages/rules.html" style="color: inherit; text-decoration: none;">Правила сервера</a>
                 </li>
                 <li class="tab">
-                    <a href="roles.html" style="color: inherit; text-decoration: none;">Роли</a>
+                    <a href="../pages/roles.html" style="color: inherit; text-decoration: none;">Роли</a>
                 </li>
                 <li class="tab">
-                    <a href="paperwork.html" style="color: inherit; text-decoration: none;">Бумажная работа</a>
+                    <a href="../pages/paperwork.html" style="color: inherit; text-decoration: none;">Бумажная работа</a>
                 </li>
                 <li class="tab">
-                    <a href="modes.html" style="color: inherit; text-decoration: none;">Режимы</a>
+                    <a href="../pages/modes.html" style="color: inherit; text-decoration: none;">Режимы</a>
                 </li>
                 <li class="tab">
-                    <a href="renders.html" style="color: inherit; text-decoration: none;">Рендер карт</a>
+                    <a href="../pages/renders.html" style="color: inherit; text-decoration: none;">Рендер карт</a>
                 </li>
                 <li class="tab active">
                     <a href="../pages/others.html" style="color: inherit; text-decoration: none;">Прочее</a>
                 </li>
             </ul>
+            <div class="nav-actions">
                 <button class="btn btn-secondary" onclick="toggleTheme()">
                     <i class="fas fa-moon"></i> Тема
                 </button>
+            </div>
         </div>
     </nav>
 
     <!-- Основное содержимое -->
     <main class="container">
-        <h3>Категории</h3>
-        <p>Описание категорий, в которых лежит полезная информаци.</p>
+      <a href="../pages/others.html" class="back-link">
+          <i class="fas fa-arrow-left"></i> Назад к списку различных категорий
+      </a>
+
+        <h3>Роли на сервере</h3>
+        <p>Описание доступных ролей в проекте, их обязанности и возможности. Выберите роль для получения подробной информации.</p>
 
         <div class="content-grid">
             <div class="card">
-                <i class="fa-solid fa-basket-shopping"></i>
-                <h4>Торговые предложения</h4>
-                <p>Торговые предложения, которые можно найти у различных NPC.</p>
-                <a href="../others/npc_traders_sales.html" class="card-link">
+                <img src="../resources/roles/hansa/HeadOfHansa.png" width="128" height="128" data-file-width="32" data-file-height="32" class="pixel-perfect">
+                <h4>Василий</h4>
+                <p>Управление Ганзой, решение споров, торговля в метро.</p>
+                <a href="npc_traders_sales/makeev.html" class="card-link">
+                    Подробнее <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            <div class="card">
+                <img src="../resources/roles/hansa/OfficerHansa.png" width="128" height="128" data-file-width="32" data-file-height="32" class="pixel-perfect">
+                <h4>Макеев</h4>
+                <p>Контроль за соблюдением правил на станции и разрешение конфликтов.</p>
+                <a href="npc_traders_sales/makeev.html" class="card-link">
                     Подробнее <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
@@ -90,17 +104,17 @@
                 <div class="footer-section">
                     <h4>Быстрые ссылки</h4>
                     <ul class="footer-links">
-                        <li><a href="beginners.html">Новичкам</a></li>
-                        <li><a href="rules.html">Правила</a></li>
-                        <li><a href="roles.html">Роли</a></li>
+                        <li><a href="../pages/beginners.html">Новичкам</a></li>
+                        <li><a href="../pages/rules.html">Правила</a></li>
+                        <li><a href="../pages/roles.html">Роли</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h4>Ресурсы</h4>
                     <ul class="footer-links">
-                        <li><a href="paperwork.html">Документы</a></li>
-                        <li><a href="modes.html">Режимы</a></li>
-                        <li><a href="renders.html">Рендеры</a></li>
+                        <li><a href="../pages/paperwork.html">Документы</a></li>
+                        <li><a href="../pages/modes.html">Режимы</a></li>
+                        <li><a href="../pages/renders.html">Рендеры</a></li>
                     </ul>
                 </div>
             </div>
