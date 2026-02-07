@@ -1,8 +1,8 @@
 // Подключаем header, nav, footer
 Promise.all([
-    fetch('/includes/header.html').then(r => r.text()),
-    fetch('/includes/nav.html').then(r => r.text()),
-    fetch('/includes/footer.html').then(r => r.text())
+    fetch('includes/header.html').then(r => r.text()),
+    fetch('includes/nav.html').then(r => r.text()),
+    fetch('includes/footer.html').then(r => r.text())
 ]).then(([headerHtml, navHtml, footerHtml]) => {
     document.getElementById('header-placeholder').innerHTML = headerHtml;
     document.getElementById('nav-placeholder').innerHTML = navHtml;

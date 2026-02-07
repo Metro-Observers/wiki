@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <base href="/wiki/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Википедия проекта - Торговый агент Ганзы</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../../resources/styles.css">
+    <link rel="stylesheet" href="resources/styles.css">
     <style>
         /* Дополнительные стили для таблицы торговца */
         .trade-table {
@@ -97,7 +98,7 @@
 
     <!-- Основное содержимое -->
     <main class="container">
-        <a href="../roles.html" class="back-link">
+        <a href="roles.html" class="back-link">
             <i class="fas fa-arrow-left"></i> Назад к списку ролей
         </a>
 
@@ -174,7 +175,7 @@
     <!-- Футер -->
     <div id="footer-placeholder"></div>
 
-    <script src="/resources/main.js"></script>
+    <script src="resources/main.js"></script>
     <script>
         // Функции для поиска, входа и темы
         function handleSearch(event) {
@@ -188,20 +189,6 @@
         function handleLogin() {
             alert('Функция входа будет доступна после подключения к серверу авторизации.');
         }
-
-        // Проверка сохранённой темы при загрузке
-        document.addEventListener('DOMContentLoaded', function() {
-            // Подсветка строк таблицы при наведении
-            const tableRows = document.querySelectorAll('.trade-table tbody tr');
-            tableRows.forEach(row => {
-                row.addEventListener('mouseenter', function() {
-                    this.style.backgroundColor = 'rgba(88, 166, 255, 0.08)';
-                });
-                row.addEventListener('mouseleave', function() {
-                    this.style.backgroundColor = '';
-                });
-            });
-        });
     </script>
 </body>
 </html>
