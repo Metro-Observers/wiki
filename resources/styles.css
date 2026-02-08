@@ -360,6 +360,17 @@ a.card:hover {
     font-size: 0.9rem;
 }
 
+/* Для includes/dev-notice.html */
+.dev-note {  
+    background: rgba(249, 197, 19, 0.1);  
+    border-left: 4px solid #f9c513;  
+    padding: 15px;  
+    margin: 20px 0;  
+    border-radius: 4px;  
+    color: var(--text-light);  
+    font-size: 0.95rem;  
+}
+
 /* Стили для страницы роли */
 .role-detail {
     background-color: var(--card-bg);
