@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <base href="/wiki/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Википедия проекта - Бумажная работа</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="resources/styles.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <div id="header-placeholder"></div>
+
+    <!-- Навигация с вкладками -->
+    <div id="nav-placeholder"></div>
+
+    <!-- Основное содержимое -->
+    <main class="container">
+        <!-- Удалить при оформлении страницы -->
+        <div id="dev-notice-placeholder"></div>
+    </main>
+
+    <!-- Футер -->
+    <div id="footer-placeholder"></div>
+
+    <script src="resources/main.js"></script>
+    <script>
+        // Удалить при оформлении (как и сам тег <script>, если ничего не будет добавлено)
+        fetch('includes/dev-notice.html')
+            .then(r => r.text())
+            .then(devNoticeHtml => {
+            document.getElementById('dev-notice-placeholder').innerHTML = devNoticeHtml;
+            });
+    </script>
+</body>
+</html>
