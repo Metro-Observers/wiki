@@ -17,21 +17,40 @@
 
     <!-- Основное содержимое -->
     <main class="container">
-        <!-- Удалить при оформлении страницы -->
-        <div id="dev-notice-placeholder"></div>
+      <a href="pages/roles.html" class="back-link">
+          <i class="fas fa-arrow-left"></i> Назад к списку фракций
+      </a>
+
+        <h3>Фракция Полис</h3>
+        <p>Полис — элитная фракция метро, расположенная на станциях кольцевой линии. Обитают в библиотеке имени Ленина.</p>
+
+        <div class="content-grid">
+            <a href="roles/polis/head_of_polis.html" class="card">
+                <img src="resources/fractions/Polis.png" width="128" height="128" data-file-width="32" data-file-height="32" class="pixel-perfect">
+                <h4>Глава Полиса</h4>
+                <p>Управление Полисом, хранение знаний, руководство орденом.</p>
+            </a>
+            <a href="roles/polis/officer_of_polis.html" class="card">
+                <img src="resources/fractions/Polis.png" width="128" height="128" data-file-width="32" data-file-height="32" class="pixel-perfect">
+                <h4>Офицер Полиса</h4>
+                <p>Защита знаний, поддержание порядка в библиотеке.</p>
+            </a>
+            <a href="roles/polis/librarian.html" class="card">
+                <img src="resources/fractions/Polis.png" width="128" height="128" data-file-width="32" data-file-height="32" class="pixel-perfect">
+                <h4>Библиотекарь</h4>
+                <p>Хранение и изучение книг, сохранение знаний человечества.</p>
+            </a>
+            <a href="roles/polis/civilian_of_polis.html" class="card">
+                <img src="resources/fractions/Polis.png" width="128" height="128" data-file-width="32" data-file-height="32" class="pixel-perfect">
+                <h4>Гражданин Полиса</h4>
+                <p>Основная роль для жителей Полиса.</p>
+            </a>
+        </div>
     </main>
 
     <!-- Футер -->
     <div id="footer-placeholder"></div>
 
     <script src="resources/main.js"></script>
-    <script>
-        // Удалить при оформлении (как и сам тег <script>, если ничего не будет добавлено)
-        fetch('includes/dev-notice.html')
-            .then(r => r.text())
-            .then(devNoticeHtml => {
-            document.getElementById('dev-notice-placeholder').innerHTML = devNoticeHtml;
-            });
-    </script>
 </body>
 </html>
