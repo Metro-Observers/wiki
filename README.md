@@ -26,3 +26,16 @@
 ## Для редакторов
 
 Вы можете добавить новую страницу, просто создав PR или вступив в отдел Wiki-редакторов.
+
+## Редактор (CMS)
+
+Правки ролей можно делать в браузере, без ручного HTML:
+
+1. Открой [CMS](https://metro-observers.github.io/wiki/admin/).
+2. Войди через **Sign in with GitHub token** (fine-grained PAT на репозиторий `Metro-Observers/wiki`: Contents + Pull requests = Read and write).
+3. Правишь поля роли → **Save** → Sveltia открывает **pull request** в `main` (editorial workflow).
+4. GitHub Action `Render role pages from CMS` пересобирает HTML из `content/roles/**/*.yml`.
+5. После ревью мержишь PR — Pages обновляет сайт.
+
+Исходники ролей: `content/roles/`. Собранные страницы: `roles/`. Локально: `python scripts/render_roles.py`.
+

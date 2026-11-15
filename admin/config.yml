@@ -1,0 +1,58 @@
+backend:
+  name: github
+  repo: Metro-Observers/wiki
+  branch: main
+
+publish_mode: editorial_workflow
+
+site_url: https://metro-observers.github.io/wiki/
+display_url: https://metro-observers.github.io/wiki/
+logo_url: https://metro-observers.github.io/wiki/resources/fractions/Polis.png
+
+media_folder: resources/uploads
+public_folder: resources/uploads
+
+locale: ru
+
+collections:
+  - name: polis_roles
+    label: Роли Полиса
+    label_singular: Роль Полиса
+    folder: content/roles/polis
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: yml
+    format: yaml
+    summary: "{{title}}"
+    fields:
+      - { name: title, label: Название, widget: string }
+      - { name: access, label: Уровень доступа, widget: string, default: "свободный" }
+      - { name: icon, label: Иконка, widget: image, choose_url: false }
+      - { name: fraction_page, label: Страница фракции, widget: string, default: "fractions/polis.html" }
+      - { name: description, label: Описание, widget: list, field: { name: paragraph, label: Абзац, widget: text } }
+      - { name: duties, label: Обязанности, widget: list, field: { name: item, label: Пункт, widget: string } }
+      - { name: rights, label: Права и возможности, widget: list, field: { name: item, label: Пункт, widget: string } }
+      - { name: requirements, label: Как получить роль, widget: list, field: { name: item, label: Пункт, widget: string } }
+      - { name: extra, label: Дополнительно, widget: list, field: { name: paragraph, label: Абзац, widget: text } }
+
+  - name: hansa_roles
+    label: Роли Ганзы
+    label_singular: Роль Ганзы
+    folder: content/roles/hansa
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    extension: yml
+    format: yaml
+    summary: "{{title}}"
+    fields:
+      - { name: title, label: Название, widget: string }
+      - { name: access, label: Уровень доступа, widget: string, default: "свободный" }
+      - { name: icon, label: Иконка, widget: image, choose_url: false }
+      - { name: fraction_page, label: Страница фракции, widget: string, default: "fractions/hansa.html" }
+      - { name: description, label: Описание, widget: list, field: { name: paragraph, label: Абзац, widget: text } }
+      - { name: duties, label: Обязанности, widget: list, field: { name: item, label: Пункт, widget: string } }
+      - { name: rights, label: Права и возможности, widget: list, field: { name: item, label: Пункт, widget: string } }
+      - { name: requirements, label: Как получить роль, widget: list, field: { name: item, label: Пункт, widget: string } }
+      - { name: extra, label: Дополнительно, widget: list, field: { name: paragraph, label: Абзац, widget: text } }

@@ -1,0 +1,41 @@
+name: Render role pages from CMS
+
+on:
+  push:
+    paths:
+      - "content/roles/**"
+      - "scripts/render_roles.py"
+  pull_request:
+    paths:
+      - "content/roles/**"
+      - "scripts/render_roles.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install PyYAML
+        run: pip install pyyaml
+
+      - name: Render HTML from content/roles
+        run: python scripts/render_roles.py
+
+      - name: Commit rendered HTML
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: render role HTML from CMS content"
+          file_pattern: "roles/**/*.html"
+        # On pull_request from forks this may no-op; editorial CMS branches are in-repo.
