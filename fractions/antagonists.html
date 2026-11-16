@@ -17,21 +17,25 @@
 
     <!-- Основное содержимое -->
     <main class="container">
-        <!-- Удалить при оформлении страницы -->
-        <div id="dev-notice-placeholder"></div>
+      <a href="pages/roles.html" class="back-link">
+          <i class="fas fa-arrow-left"></i> Назад к списку фракций
+      </a>
+
+        <h3>Роли на сервере</h3>
+        <p>Описание доступных ролей в проекте, их обязанности и возможности. Выберите роль для получения подробной информации.</p>
+
+        <div class="content-grid">
+            <a href="roles/antagonists/cestoda/cestoda.html" class="card">
+                <img src="resources/roles/cestoda/Worm_darkblue.png" width="128" height="128" data-file-width="501" data-file-height="500" class="pixel-perfect">
+                <h4>Ленточники</h4>
+                <p>Мы осчастливим вас</p>
+            </a>
+        </div>
     </main>
 
     <!-- Футер -->
     <div id="footer-placeholder"></div>
 
     <script src="resources/main.js"></script>
-    <script>
-        // Удалить при оформлении (как и сам тег <script>, если ничего не будет добавлено)
-        fetch('includes/dev-notice.html')
-            .then(r => r.text())
-            .then(devNoticeHtml => {
-            document.getElementById('dev-notice-placeholder').innerHTML = devNoticeHtml;
-            });
-    </script>
 </body>
 </html>
