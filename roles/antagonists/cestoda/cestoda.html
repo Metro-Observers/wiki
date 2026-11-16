@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+<base href="/wiki/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ленточники — Метро-14</title>
+<link rel="stylesheet" href="resources/styles.css">
 <style>
     /* ===== Базовая типографика ===== */
     * { box-sizing: border-box; }
@@ -15,7 +17,6 @@
         font-size: 14px;
         line-height: 1.6;
         color: #202122;
-        background: #4A5D23   /* Задник нужно поменять */
     }
 
     a { color: #3366cc; text-decoration: none; }
@@ -31,25 +32,6 @@
         border: 1px solid #a2a9b1;
         border-top: none;
         padding: 0 1.5em 2em 1.5em;
-    }
-
-    /* ===== Заголовок сайта ===== */
-    .site-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0.5em 0;
-        border-bottom: 1px solid #a2a9b1;
-    }
-    .site-header .logo {
-        font-family: 'Linux Libertine', Georgia, serif;
-        font-size: 1.8em;
-        font-weight: normal;
-    }
-    .site-header .logo b { color: #000; }
-    .site-header .tagline {
-        font-size: 0.85em;
-        color: #54595d;
     }
 
     /* ===== Заголовок статьи ===== */
@@ -75,6 +57,7 @@
         margin: 0 0 1em 1.5em;
         border: 1px solid #4A5D23;
         background: #4A5D23;
+        color: #ffffff;
         font-size: 0.9em;
         padding: 0;
         line-height: 1.5;
@@ -99,7 +82,7 @@
     }
     .infobox-caption {
         font-size: 0.85em;
-        color: #4A5D23;
+        color: #e6e6e6;
         margin-top: 0.4em;
     }
     .infobox table {
@@ -180,23 +163,12 @@
 
     /* ===== Служебные плашки ===== */
     .ambox {
-        border: 1px solid #a2a9b1;
-        border-left: 8px solid #f28500;
-        background: #fef6e7;
-        padding: 0.5em 1em;
-        margin: 1em 0;
+        width: fit-content;
+        margin: 0;
+        padding: 8px 16px;
+        border: 1px solid #7a732d;
+        background: #c3b949;
         font-size: 0.9em;
-    }
-
-    /* ===== Подвал ===== */
-    .site-footer {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 1em 1.5em;
-        font-size: 0.85em;
-        color: #54595d;
-        border-top: 1px solid #a2a9b1;
-        background: #f8f9fa;
     }
 
     /* ===== Адаптив ===== */
@@ -213,12 +185,10 @@
 </head>
 <body>
 
-<div class="wiki-page">
+<div id="header-placeholder"></div>
+<div id="nav-placeholder"></div>
 
-    <!-- Шапка -->
-    <div class="site-header">
-        <div class="logo">Вики Метро-14</div>
-    </div>
+<div class="wiki-page">
 
     <!-- Заголовок статьи -->
     <h1 class="article-title">Ленточники</h1>
@@ -285,15 +255,6 @@
     </div>
 
     <!-- Плашка-предупреждение -->
-    <style>
-    .ambox {
-    width: fit-content;
-    margin: 0 0 0;
-    padding: 8px 16px;
-    border: 1px solid #7a732d;
-    background: #c3b949;
-     } </style>
-
     <div class="ambox">
     <b>Внимание.</b> Данная статья описывает внутриигровую роль.<br>
     Правила сервера и указания администрации имеют приоритет
@@ -323,7 +284,7 @@
     <!-- ===== Способности и особенности ===== -->
     <h2 id="ability">Способности и особенности</h2>
     <ul>
-        Требуется дописать
+        <li>Требуется дописать</li>
     </ul>
 
     <!-- ===== Получение роли ===== -->
@@ -380,13 +341,8 @@
 
 </div>
 
-<!-- Подвал -->
-<div class="site-footer">
-    Страница обновлена: 16.11.2026. Текст доступен по лицензии
-    CC BY-SA 4.0, если не указано иное.<br>
-    По всем вопросам обращайтесь в
-    <a href="https://discord.gg/QUvqVWEa7">Discord</a>.
-</div>
+<div id="footer-placeholder"></div>
+<script src="resources/main.js"></script>
 
 </body>
 </html>
